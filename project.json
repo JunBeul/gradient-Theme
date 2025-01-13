@@ -1,0 +1,356 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "7가지 테마를 선택할 수 있는 그라데이션 배경화면입니다.\r\n시계와 문구를 간단히 커스텀할 수 있으며, 원하는 문구를 타이핑하는 키보드도 커스텀 가능합니다.",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"clock" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "Clock Style",
+				"type" : "group",
+				"value" : ""
+			},
+			"clockdisable" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "clock disable",
+				"type" : "bool",
+				"value" : false
+			},
+			"clockpositionx" : 
+			{
+				"fraction" : false,
+				"index" : 8,
+				"max" : 100,
+				"min" : 0,
+				"order" : 108,
+				"text" : "position X",
+				"type" : "slider",
+				"value" : 50
+			},
+			"clockpositiony" : 
+			{
+				"fraction" : false,
+				"index" : 9,
+				"max" : 100,
+				"min" : 0,
+				"order" : 109,
+				"text" : "position Y",
+				"type" : "slider",
+				"value" : 15
+			},
+			"colorpreset" : 
+			{
+				"index" : 1,
+				"options" : 
+				[
+					{
+						"label" : "deep sea",
+						"value" : "deepsea"
+					},
+					{
+						"label" : "lavender",
+						"value" : "lavender"
+					},
+					{
+						"label" : "parrot",
+						"value" : "parrot"
+					},
+					{
+						"label" : "cosmos",
+						"value" : "cosmos"
+					},
+					{
+						"label" : "eclipse",
+						"value" : "eclipse"
+					},
+					{
+						"label" : "blank",
+						"value" : "blank"
+					},
+					{
+						"label" : "terminal",
+						"value" : "terminal"
+					}
+				],
+				"order" : 101,
+				"text" : "color palette",
+				"type" : "combo",
+				"value" : "cosmos"
+			},
+			"datebold" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "date font bold",
+				"type" : "bool",
+				"value" : false
+			},
+			"datefontsize" : 
+			{
+				"fraction" : true,
+				"index" : 5,
+				"max" : 10,
+				"min" : 1,
+				"order" : 105,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "date font size",
+				"type" : "slider",
+				"value" : 3
+			},
+			"gradientstyle" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Theme",
+				"type" : "group",
+				"value" : ""
+			},
+			"keyboarddisable" : 
+			{
+				"index" : 25,
+				"order" : 125,
+				"text" : "keyboard disable",
+				"type" : "bool",
+				"value" : false
+			},
+			"keyboardpositionx" : 
+			{
+				"fraction" : false,
+				"index" : 27,
+				"max" : 100,
+				"min" : 0,
+				"order" : 127,
+				"text" : "position X",
+				"type" : "slider",
+				"value" : 50
+			},
+			"keyboardpositiony" : 
+			{
+				"fraction" : true,
+				"index" : 28,
+				"max" : 100,
+				"min" : 0,
+				"order" : 128,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "position Y",
+				"type" : "slider",
+				"value" : 50
+			},
+			"keyboardsize" : 
+			{
+				"fraction" : false,
+				"index" : 26,
+				"max" : 1600,
+				"min" : 600,
+				"order" : 126,
+				"text" : "keyboard size",
+				"type" : "slider",
+				"value" : 1200
+			},
+			"keyboardstyle" : 
+			{
+				"index" : 17,
+				"order" : 117,
+				"text" : "Keyboard Style",
+				"type" : "group",
+				"value" : ""
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.49411764705882355 0.4745098039215686 0.8313725490196079"
+			},
+			"sentence" : 
+			{
+				"index" : 12,
+				"order" : 112,
+				"text" : "sentence",
+				"type" : "textinput",
+				"value" : "Now, I'm waiting here in this place."
+			},
+			"textbold" : 
+			{
+				"index" : 13,
+				"order" : 113,
+				"text" : "text font bold",
+				"type" : "bool",
+				"value" : true
+			},
+			"textdisable" : 
+			{
+				"index" : 11,
+				"order" : 111,
+				"text" : "text disable",
+				"type" : "bool",
+				"value" : false
+			},
+			"textfontsize" : 
+			{
+				"fraction" : true,
+				"index" : 14,
+				"max" : 10,
+				"min" : 1,
+				"order" : 114,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "text font size",
+				"type" : "slider",
+				"value" : 3
+			},
+			"textpositionx" : 
+			{
+				"fraction" : false,
+				"index" : 15,
+				"max" : 100,
+				"min" : 0,
+				"order" : 115,
+				"text" : "position X",
+				"type" : "slider",
+				"value" : 50
+			},
+			"textpositiony" : 
+			{
+				"fraction" : false,
+				"index" : 16,
+				"max" : 100,
+				"min" : 0,
+				"order" : 116,
+				"text" : "position Y",
+				"type" : "slider",
+				"value" : 75
+			},
+			"textstyle" : 
+			{
+				"index" : 10,
+				"order" : 110,
+				"text" : "Text Style",
+				"type" : "group",
+				"value" : ""
+			},
+			"texttypingalign" : 
+			{
+				"index" : 23,
+				"options" : 
+				[
+					{
+						"label" : "left",
+						"value" : "left"
+					},
+					{
+						"label" : "center",
+						"value" : "center"
+					},
+					{
+						"label" : "right",
+						"value" : "right"
+					}
+				],
+				"order" : 123,
+				"text" : "text typing align",
+				"type" : "combo",
+				"value" : "center"
+			},
+			"texttypingbold" : 
+			{
+				"index" : 21,
+				"order" : 121,
+				"text" : "text typing bold",
+				"type" : "bool",
+				"value" : false
+			},
+			"texttypingdisable" : 
+			{
+				"index" : 18,
+				"order" : 118,
+				"text" : "text typing disable",
+				"type" : "bool",
+				"value" : false
+			},
+			"texttypinggap" : 
+			{
+				"fraction" : true,
+				"index" : 24,
+				"max" : 2,
+				"min" : 0,
+				"order" : 124,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "gap",
+				"type" : "slider",
+				"value" : 1
+			},
+			"texttypingsentence" : 
+			{
+				"index" : 20,
+				"order" : 120,
+				"text" : "text typing sentence",
+				"type" : "textinput",
+				"value" : "Hello World!!"
+			},
+			"texttypingsize" : 
+			{
+				"fraction" : true,
+				"index" : 22,
+				"max" : 10,
+				"min" : 1,
+				"order" : 122,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "text typing size",
+				"type" : "slider",
+				"value" : 3
+			},
+			"timebold" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "time font bold",
+				"type" : "bool",
+				"value" : true
+			},
+			"timefontsize" : 
+			{
+				"fraction" : true,
+				"index" : 7,
+				"max" : 25,
+				"min" : 5,
+				"order" : 107,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "time font size",
+				"type" : "slider",
+				"value" : 9
+			},
+			"typingsound" : 
+			{
+				"index" : 19,
+				"order" : 119,
+				"text" : "typing sound",
+				"type" : "bool",
+				"value" : false
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
+	"snapshotformat" : 0,
+	"snapshotoverlay" : "",
+	"tags" : [ "Abstract" ],
+	"title" : "키보드 타이핑, 커스텀 그라디언트 테마",
+	"type" : "web",
+	"version" : 8,
+	"visibility" : "public",
+	"workshopid" : "3405200363",
+	"workshopurl" : "steam://url/CommunityFilePage/3405200363"
+}
