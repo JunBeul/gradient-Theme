@@ -1,157 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-:root{
-    --size-1u: calc(100% / 18.5);
-}
-
-.date-time{
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 20%;
-    z-index: 10;
-    font-family: "Ubuntu", serif;
-}
-.date{
-    margin-bottom: -1rem;
-    color: var(--color-text);
-    display: flex;
-    justify-content: center;
-    letter-spacing: 12px;
-    margin-left: 12px;
-}
-.time{
-    color: var(--color-text);
-    display: flex;
-    justify-content: center;
+:root {
+  --size-1u: calc(100% / 18.5);
 }
 
-.main-text{
-    font-family: "Ubuntu", serif;
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: var(--color-text);
-    z-index: 10;
+.date-time {
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 20%;
+  z-index: 10;
+  font-family: "Ubuntu", serif;
+}
+.date {
+  margin-bottom: -1rem;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  letter-spacing: 12px;
+  margin-left: 12px;
+}
+.time {
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+}
+
+.main-text {
+  font-family: "Ubuntu", serif;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: var(--color-text);
+  z-index: 10;
 }
 
 /* keyboard */
-.container{
-    display: inline-block;
-    font-family: "Ubuntu", serif;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    z-index: 10;
+.container {
+  display: inline-block;
+  font-family: "Ubuntu", serif;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: 10;
 }
-.typing-text{
-    color: var(--color-text);;
-    height: 10px;
-    font-family: "Nanum Gothic Coding", serif;
+.typing-text {
+  color: var(--color-text);
+  height: 10px;
+  font-family: "Nanum Gothic Coding", serif;
 }
 
 .keyboard-box {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid var(--color-text);
-    border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-text);
+  background-color: var(--color-window-bg);
+  border-radius: 10px;
 }
 
 .tenkeyless-keyboard {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    padding: 10px;
-    background-color: transparent;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .row {
-    display: flex;
+  display: flex;
 }
 
 .row-spacer {
-    width: var(--size-1u);
-    aspect-ratio: 2.75 / 1;
+  width: var(--size-1u);
+  aspect-ratio: 2.75 / 1;
 }
 
 .key {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    color: var(--color-text);
-    border: 3px solid #ffffff00;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    text-transform: uppercase;
-    position:relative;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+  border: 3px solid #ffffff00;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
 }
 
 .key::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    border-radius: 5px;
-    border: 2px solid var(--color-text);
-    background-color: transparent;
-    transition: background-color 0.1s;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 5px;
+  border: 2px solid var(--color-text);
+  transition: 0.1s;
 }
 
 .key.active::before {
-    background-color: var(--color-text);
+  background-color: var(--color-text);
 }
 
 .key.size-1u {
-    width: var(--size-1u);
-    aspect-ratio: 1 / 1;
+  width: var(--size-1u);
+  aspect-ratio: 1 / 1;
 }
 
 .key.size-1_25u {
-    width: calc(var(--size-1u) * 1.25);
+  width: calc(var(--size-1u) * 1.25);
 }
 
 .key.size-1_5u {
-    width: calc(var(--size-1u) * 1.5);
+  width: calc(var(--size-1u) * 1.5);
 }
 
 .key.size-1_75u {
-    width: calc(var(--size-1u) * 1.75);
+  width: calc(var(--size-1u) * 1.75);
 }
 
 .key.size-2u {
-    width: calc(var(--size-1u) * 2);
+  width: calc(var(--size-1u) * 2);
 }
 
 .key.size-2_25u {
-    width: calc(var(--size-1u) * 2.25);
+  width: calc(var(--size-1u) * 2.25);
 }
 
 .key.size-2_75u {
-    width: calc(var(--size-1u) * 2.75);
+  width: calc(var(--size-1u) * 2.75);
 }
 
 .key.size-6_25u {
-    width: calc(var(--size-1u) * 6.25);
+  width: calc(var(--size-1u) * 6.25);
 }
 
 .gap {
-    width: calc(var(--size-1u) * 0.5);
+  width: calc(var(--size-1u) * 0.5);
 }
 .gap.size-0_75u {
-    width: calc(var(--size-1u) * 0.666);
+  width: calc(var(--size-1u) * 0.666);
 }
 .gap.size-1u {
-    width: var(--size-1u);
+  width: var(--size-1u);
 }
-svg{
-    fill: var(--color-text);
+svg {
+  fill: var(--color-text);
 }

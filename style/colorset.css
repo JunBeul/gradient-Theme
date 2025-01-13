@@ -1,96 +1,96 @@
 :root.deepsea {
-    --color-bg1: rgb(8, 10, 15);
-    --color-bg2: rgb(0, 17, 32);
-    --color1: 18, 113, 255;
-    --color2: 107, 74, 255;
-    --color3: 100, 100, 255;
-    --color4: 50, 160, 220;
-    --color5: 80, 47, 122;
-    --color-interactive: 140, 100, 255;
-    --color-text: rgba(255, 255, 255, 0.6);
-    --color-window-bg: rgba(255, 255, 255, 0.3);
+  --color-bg1: rgb(8, 10, 15);
+  --color-bg2: rgb(0, 17, 32);
+  --color1: 18, 113, 255;
+  --color2: 107, 74, 255;
+  --color3: 100, 100, 255;
+  --color4: 50, 160, 220;
+  --color5: 80, 47, 122;
+  --color-interactive: 140, 100, 255;
+  --color-text: rgba(255, 255, 255, 0.6);
+  --color-window-bg: rgba(255, 255, 255, 0.1);
 }
 :root.lavender {
-    --color-bg1: rgb(228, 171, 255);
-    --color-bg2: rgb(167, 221, 255);
-    --color1: 255, 214, 255; 
-    --color2: 231, 198, 255;
-    --color3: 200, 182, 255;
-    --color4: 184, 192, 255;
-    --color5: 187, 208, 255;
-    --color-interactive: 140, 100, 255;
-    --color-text: rgba(0, 0, 0, 0.6);
-    --color-window-bg: rgba(0, 0, 0, 0.3);
+  --color-bg1: rgb(228, 171, 255);
+  --color-bg2: rgb(167, 221, 255);
+  --color1: 255, 214, 255;
+  --color2: 231, 198, 255;
+  --color3: 200, 182, 255;
+  --color4: 184, 192, 255;
+  --color5: 187, 208, 255;
+  --color-interactive: 140, 100, 255;
+  --color-text: rgba(0, 0, 0, 0.6);
+  --color-window-bg: rgba(0, 0, 0, 0.1);
 }
 :root.parrot {
-    --color-bg1: rgb(255, 212, 55);
-    --color-bg2: rgb(74, 186, 255);
-    --color1: 136, 255, 134; 
-    --color2: 26, 173, 191;
-    --color3: 208, 174, 144;
-    --color4: 253, 76, 36;
-    --color5: 9, 247, 188;
-    --color-interactive: 242, 242, 242;
-    --color-text: rgba(255, 94, 94, 0.8);
-    --color-window-bg: rgba(255, 94, 94, 0.4);
+  --color-bg1: rgb(255, 212, 55);
+  --color-bg2: rgb(74, 186, 255);
+  --color1: 136, 255, 134;
+  --color2: 26, 173, 191;
+  --color3: 208, 174, 144;
+  --color4: 253, 76, 36;
+  --color5: 9, 247, 188;
+  --color-interactive: 242, 242, 242;
+  --color-text: rgba(255, 94, 94, 0.8);
+  --color-window-bg: rgba(255, 94, 94, 0.1);
 }
 :root.parrot {
-    --color-bg1: rgb(255, 212, 55);
-    --color-bg2: rgb(74, 186, 255);
-    --color1: 136, 255, 134; 
-    --color2: 26, 173, 191;
-    --color3: 208, 174, 144;
-    --color4: 253, 76, 36;
-    --color5: 9, 247, 188;
-    --color-interactive: 242, 242, 242;
-    --color-text: rgba(255, 94, 94, 0.8);
-    --color-window-bg: rgba(255, 94, 94, 0.4);
+  --color-bg1: rgb(255, 212, 55);
+  --color-bg2: rgb(74, 186, 255);
+  --color1: 136, 255, 134;
+  --color2: 26, 173, 191;
+  --color3: 208, 174, 144;
+  --color4: 253, 76, 36;
+  --color5: 9, 247, 188;
+  --color-interactive: 242, 242, 242;
+  --color-text: rgba(255, 94, 94, 0.8);
+  --color-window-bg: rgba(255, 94, 94, 0.1);
 }
 :root.cosmos {
-    --color-bg1: rgb(11, 12, 16);
-    --color-bg2: rgb(27, 31, 54);
-    --color1: 58, 0, 102; 
-    --color2: 204, 90, 171;
-    --color3: 59, 115, 181;
-    --color4: 204, 117, 61;
-    --color5: 179, 179, 179;
-    --color-interactive: 255, 221, 79;
-    --color-text: rgba(255, 255, 255, 0.6);
-    --color-window-bg: rgba(255, 255, 255, 0.3);
+  --color-bg1: rgb(11, 12, 16);
+  --color-bg2: rgb(27, 31, 54);
+  --color1: 58, 0, 102;
+  --color2: 204, 90, 171;
+  --color3: 59, 115, 181;
+  --color4: 204, 117, 61;
+  --color5: 179, 179, 179;
+  --color-interactive: 255, 221, 79;
+  --color-text: rgba(255, 255, 255, 0.6);
+  --color-window-bg: rgba(255, 255, 255, 0.1);
 }
 :root.eclipse {
-    --color-bg1: rgb(15, 15, 20);
-    --color-bg2: rgb(28, 16, 36);
-    --color1: 30, 45, 80; 
-    --color2: 60, 30, 70;
-    --color3: 50, 50, 60;
-    --color4: 45, 70, 55;
-    --color5: 55, 40, 30;
-    --color-interactive: 96, 10, 30;
-    --color-text: rgba(255, 255, 255, 0.6);
-    --color-window-bg: rgba(255, 255, 255, 0.3);
+  --color-bg1: rgb(15, 15, 20);
+  --color-bg2: rgb(28, 16, 36);
+  --color1: 30, 45, 80;
+  --color2: 60, 30, 70;
+  --color3: 50, 50, 60;
+  --color4: 45, 70, 55;
+  --color5: 55, 40, 30;
+  --color-interactive: 96, 10, 30;
+  --color-text: rgba(255, 255, 255, 0.6);
+  --color-window-bg: rgba(255, 255, 255, 0.1);
 }
 :root.blank {
-    --color-bg1: rgb(15, 15, 20);
-    --color-bg2: rgb(0, 0, 0);
-    --color1: 27, 22, 21; 
-    --color2: 9, 1, 1;
-    --color3: 1, 9, 5;
-    --color4: 0, 0, 0;
-    --color5: 19, 1, 7;
-    --color-interactive: 47, 45, 38;
-    --color-text: rgba(255, 255, 255, 0.6);
-    --color-window-bg: rgba(255, 255, 255, 0.3);
+  --color-bg1: rgb(15, 15, 20);
+  --color-bg2: rgb(0, 0, 0);
+  --color1: 27, 22, 21;
+  --color2: 9, 1, 1;
+  --color3: 1, 9, 5;
+  --color4: 0, 0, 0;
+  --color5: 19, 1, 7;
+  --color-interactive: 47, 45, 38;
+  --color-text: rgba(255, 255, 255, 0.6);
+  --color-window-bg: rgba(255, 255, 255, 0.1);
 }
 :root.terminal {
-    --color-bg1: rgb(0, 30, 0);
-    --color-bg2: rgb(0, 0, 0);
-    --color1: 0, 0, 0; 
-    --color2: 10, 31, 0;
-    --color3: 4, 41, 4;
-    --color4: 4, 29, 21;
-    --color5: 0, 18, 4;
-    --color-interactive: 36, 58, 41;
-    --color-text: rgba(0, 161, 38, 0.6);
-    --color-window-bg: rgba(0, 161, 38, 0.3);
+  --color-bg1: rgb(0, 30, 0);
+  --color-bg2: rgb(0, 0, 0);
+  --color1: 0, 0, 0;
+  --color2: 10, 31, 0;
+  --color3: 4, 41, 4;
+  --color4: 4, 29, 21;
+  --color5: 0, 18, 4;
+  --color-interactive: 36, 58, 41;
+  --color-text: rgba(0, 161, 38, 0.6);
+  --color-window-bg: rgba(0, 161, 38, 0.1);
 }

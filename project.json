@@ -1,6 +1,6 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "7가지 테마를 선택할 수 있는 그라데이션 배경화면입니다.\r\n시계와 문구를 간단히 커스텀할 수 있으며, 원하는 문구를 타이핑하는 키보드도 커스텀 가능합니다.",
+	"description" : "This is a gradient wallpaper with seven selectable themes.\nYou can easily customize the clock, text, and keyboard to type any text you want.",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -114,8 +114,8 @@
 			},
 			"keyboarddisable" : 
 			{
-				"index" : 25,
-				"order" : 125,
+				"index" : 26,
+				"order" : 126,
 				"text" : "keyboard disable",
 				"type" : "bool",
 				"value" : false
@@ -123,10 +123,10 @@
 			"keyboardpositionx" : 
 			{
 				"fraction" : false,
-				"index" : 27,
+				"index" : 28,
 				"max" : 100,
 				"min" : 0,
-				"order" : 127,
+				"order" : 128,
 				"text" : "position X",
 				"type" : "slider",
 				"value" : 50
@@ -134,10 +134,10 @@
 			"keyboardpositiony" : 
 			{
 				"fraction" : true,
-				"index" : 28,
+				"index" : 29,
 				"max" : 100,
 				"min" : 0,
-				"order" : 128,
+				"order" : 129,
 				"precision" : 2,
 				"step" : 0.1,
 				"text" : "position Y",
@@ -147,10 +147,10 @@
 			"keyboardsize" : 
 			{
 				"fraction" : false,
-				"index" : 26,
+				"index" : 27,
 				"max" : 1600,
 				"min" : 600,
-				"order" : 126,
+				"order" : 127,
 				"text" : "keyboard size",
 				"type" : "slider",
 				"value" : 1200
@@ -168,7 +168,7 @@
 				"order" : 0,
 				"text" : "ui_browse_properties_scheme_color",
 				"type" : "color",
-				"value" : "0.49411764705882355 0.4745098039215686 0.8313725490196079"
+				"value" : "0 0 0"
 			},
 			"sentence" : 
 			{
@@ -239,7 +239,7 @@
 			},
 			"texttypingalign" : 
 			{
-				"index" : 23,
+				"index" : 24,
 				"options" : 
 				[
 					{
@@ -255,15 +255,15 @@
 						"value" : "right"
 					}
 				],
-				"order" : 123,
+				"order" : 124,
 				"text" : "text typing align",
 				"type" : "combo",
 				"value" : "center"
 			},
 			"texttypingbold" : 
 			{
-				"index" : 21,
-				"order" : 121,
+				"index" : 22,
+				"order" : 122,
 				"text" : "text typing bold",
 				"type" : "bool",
 				"value" : false
@@ -279,10 +279,10 @@
 			"texttypinggap" : 
 			{
 				"fraction" : true,
-				"index" : 24,
+				"index" : 25,
 				"max" : 2,
 				"min" : 0,
-				"order" : 124,
+				"order" : 125,
 				"precision" : 2,
 				"step" : 0.1,
 				"text" : "gap",
@@ -291,8 +291,8 @@
 			},
 			"texttypingsentence" : 
 			{
-				"index" : 20,
-				"order" : 120,
+				"index" : 21,
+				"order" : 121,
 				"text" : "text typing sentence",
 				"type" : "textinput",
 				"value" : "Hello World!!"
@@ -300,10 +300,10 @@
 			"texttypingsize" : 
 			{
 				"fraction" : true,
-				"index" : 22,
+				"index" : 23,
 				"max" : 10,
 				"min" : 1,
-				"order" : 122,
+				"order" : 123,
 				"precision" : 2,
 				"step" : 0.1,
 				"text" : "text typing size",
@@ -338,18 +338,27 @@
 				"text" : "typing sound",
 				"type" : "bool",
 				"value" : false
+			},
+			"typingspeed" : 
+			{
+				"fraction" : false,
+				"index" : 20,
+				"max" : 1000,
+				"min" : 100,
+				"order" : 120,
+				"text" : "typing speed (ms)",
+				"type" : "slider",
+				"value" : 500
 			}
 		}
 	},
 	"preview" : "preview.gif",
 	"ratingsex" : "none",
 	"ratingviolence" : "none",
-	"snapshotformat" : 0,
-	"snapshotoverlay" : "",
 	"tags" : [ "Abstract" ],
-	"title" : "키보드 타이핑, 커스텀 그라디언트 테마",
+	"title" : "Keyboard Typing, Custom Gradient Theme",
 	"type" : "web",
-	"version" : 8,
+	"version" : 9,
 	"visibility" : "public",
 	"workshopid" : "3405200363",
 	"workshopurl" : "steam://url/CommunityFilePage/3405200363"
