@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenkeyless Keyboard</title>
+    <style>
+        :root{
+            --size-1u: calc(100% / 18.5);
+            --color-text: #000;
+        }
+        .container{
+            display: inline-block;
+        }
+        .typing-text{
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .keyboard-box {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border: 2px solid var(--color-text);
+            border-radius: 10px;
+        }
+
+        .tenkeyless-keyboard {
+            display: flex;
+            width: 1000px;
+            flex-direction: column;
+            padding: 10px;
+            background-color: transparent;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .row-spacer {
+            width: var(--size-1u);
+            aspect-ratio: 2.75 / 1;
+        }
+
+        .key {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            color: var(--color-text);
+            border: 3px solid #ffffff00;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            text-transform: uppercase;
+            position:relative;
+        }
+
+        .key::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            border-radius: 5px;
+            border: 2px solid var(--color-text);
+            background-color: transparent;
+            transition: background-color 0.1s;
+        }
+
+        .key.active::before {
+            background-color: var(--color-text);
+        }
+
+        .key.size-1u {
+            width: var(--size-1u);
+            aspect-ratio: 1 / 1;
+        }
+
+        .key.size-1_25u {
+            width: calc(var(--size-1u) * 1.25);
+        }
+
+        .key.size-1_5u {
+            width: calc(var(--size-1u) * 1.5);
+        }
+
+        .key.size-1_75u {
+            width: calc(var(--size-1u) * 1.75);
+        }
+
+        .key.size-2u {
+            width: calc(var(--size-1u) * 2);
+        }
+
+        .key.size-2_25u {
+            width: calc(var(--size-1u) * 2.25);
+        }
+
+        .key.size-2_75u {
+            width: calc(var(--size-1u) * 2.75);
+        }
+
+        .key.size-6_25u {
+            width: calc(var(--size-1u) * 6.25);
+        }
+
+        .gap {
+            width: calc(var(--size-1u) * 0.5);
+        }
+        .gap.size-1u {
+            width: var(--size-1u);
+        }
+        .gap.size-0_75u {
+            width: calc(var(--size-1u) * 0.666);
+        }
+        svg{
+            fill: var(--color-text);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="typing-text"></div>
+        <div class="keyboard-box">
+            <div class="tenkeyless-keyboard">
+                <!-- Row 1 -->
+                <div class="row">
+                    <div class="key size-1u" data-key="Escape">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-escape" viewBox="0 0 16 16">
+                            <path d="M8.538 1.02a.5.5 0 1 0-.076.998 6 6 0 1 1-6.445 6.444.5.5 0 0 0-.997.076A7 7 0 1 0 8.538 1.02"/>
+                            <path d="M7.096 7.828a.5.5 0 0 0 .707-.707L2.707 2.025h2.768a.5.5 0 1 0 0-1H1.5a.5.5 0 0 0-.5.5V5.5a.5.5 0 0 0 1 0V2.732z"/>
+                        </svg>
+                    </div>
+                    <div class="gap size-1u"></div>
+                    <div class="key size-1u" data-key="F1">F1</div>
+                    <div class="key size-1u" data-key="F2">F2</div>
+                    <div class="key size-1u" data-key="F3">F3</div>
+                    <div class="key size-1u" data-key="F4">F4</div>
+                    <div class="gap size-0_75u"></div>
+                    <div class="key size-1u" data-key="F5">F5</div>
+                    <div class="key size-1u" data-key="F6">F6</div>
+                    <div class="key size-1u" data-key="F7">F7</div>
+                    <div class="key size-1u" data-key="F8">F8</div>
+                    <div class="gap size-0_75u"></div>
+                    <div class="key size-1u" data-key="F9">F9</div>
+                    <div class="key size-1u" data-key="F10">F10</div>
+                    <div class="key size-1u" data-key="F11">F11</div>
+                    <div class="key size-1u" data-key="F12">F12</div>
+                    <div class="gap"></div>
+                    <div class="key size-1u" data-key="PrintScreen">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                            <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"/>
+                            <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="ScrollLock">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+                            <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="Pause">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Spacer Row -->
+                <div class="row-spacer"></div>
+
+                <!-- Row 2 -->
+                <div class="row">
+                    <div class="key size-1u" data-key="Backquote">`</div>
+                    <div class="key size-1u" data-key="Digit1">1</div>
+                    <div class="key size-1u" data-key="Digit2">2</div>
+                    <div class="key size-1u" data-key="Digit3">3</div>
+                    <div class="key size-1u" data-key="Digit4">4</div>
+                    <div class="key size-1u" data-key="Digit5">5</div>
+                    <div class="key size-1u" data-key="Digit6">6</div>
+                    <div class="key size-1u" data-key="Digit7">7</div>
+                    <div class="key size-1u" data-key="Digit8">8</div>
+                    <div class="key size-1u" data-key="Digit9">9</div>
+                    <div class="key size-1u" data-key="Digit0">0</div>
+                    <div class="key size-1u" data-key="Minus">-</div>
+                    <div class="key size-1u" data-key="Equal">=</div>
+                    <div class="key size-2u" data-key="Backspace">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                            <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z"/>
+                        </svg>
+                    </div>
+                    <div class="gap"></div>
+                    <div class="key size-1u" data-key="Insert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="Home">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="PageUp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="row">
+                    <div class="key size-1_5u" data-key="Tab">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-indent" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M3 8a.5.5 0 0 1 .5-.5h6.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H3.5A.5.5 0 0 1 3 8"/>
+                            <path fill-rule="evenodd" d="M12.5 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="KeyQ">Q</div>
+                    <div class="key size-1u" data-key="KeyW">W</div>
+                    <div class="key size-1u" data-key="KeyE">E</div>
+                    <div class="key size-1u" data-key="KeyR">R</div>
+                    <div class="key size-1u" data-key="KeyT">T</div>
+                    <div class="key size-1u" data-key="KeyY">Y</div>
+                    <div class="key size-1u" data-key="KeyU">U</div>
+                    <div class="key size-1u" data-key="KeyI">I</div>
+                    <div class="key size-1u" data-key="KeyO">O</div>
+                    <div class="key size-1u" data-key="KeyP">P</div>
+                    <div class="key size-1u" data-key="BracketLeft">[</div>
+                    <div class="key size-1u" data-key="BracketRight">]</div>
+                    <div class="key size-1_5u" data-key="Backslash">\</div>
+                    <div class="gap"></div>
+                    <div class="key size-1u" data-key="Delete">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="End">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">
+                            <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="PageDown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="row">
+                    <div class="key size-1_75u" data-key="CapsLock">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capslock-fill" viewBox="0 0 16 16">
+                            <path d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816zM4.5 13.5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="KeyA">A</div>
+                    <div class="key size-1u" data-key="KeyS">S</div>
+                    <div class="key size-1u" data-key="KeyD">D</div>
+                    <div class="key size-1u" data-key="KeyF">F</div>
+                    <div class="key size-1u" data-key="KeyG">G</div>
+                    <div class="key size-1u" data-key="KeyH">H</div>
+                    <div class="key size-1u" data-key="KeyJ">J</div>
+                    <div class="key size-1u" data-key="KeyK">K</div>
+                    <div class="key size-1u" data-key="KeyL">L</div>
+                    <div class="key size-1u" data-key="Semicolon">;</div>
+                    <div class="key size-1u" data-key="Quote">'</div>
+                    <div class="key size-2_25u" data-key="Enter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="row">
+                    <div class="key size-2_25u" data-key="ShiftLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                            <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="KeyZ">Z</div>
+                    <div class="key size-1u" data-key="KeyX">X</div>
+                    <div class="key size-1u" data-key="KeyC">C</div>
+                    <div class="key size-1u" data-key="KeyV">V</div>
+                    <div class="key size-1u" data-key="KeyB">B</div>
+                    <div class="key size-1u" data-key="KeyN">N</div>
+                    <div class="key size-1u" data-key="KeyM">M</div>
+                    <div class="key size-1u" data-key="Comma">,</div>
+                    <div class="key size-1u" data-key="Period">.</div>
+                    <div class="key size-1u" data-key="Slash">/</div>
+                    <div class="key size-2_75u" data-key="ShiftRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                            <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                        </svg>
+                    </div>
+                    <div class="gap"></div>
+                    <div class="gap size-1u"></div>
+                    <div class="key size-1u" data-key="ArrowUp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="row">
+                    <div class="key size-1_25u" data-key="ControlLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
+                            <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3M6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5zm4 1v4H6V6zm1-1V3.5A1.5 1.5 0 1 1 12.5 5zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1_25u" data-key="MetaLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 16 16">
+                            <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1_25u" data-key="AltLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alt" viewBox="0 0 16 16">
+                            <path d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5m10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5"/>
+                        </svg>
+                    </div>
+                    <div class="key size-6_25u" data-key="Space"></div>
+                    <div class="key size-1_25u" data-key="AltRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alt" viewBox="0 0 16 16">
+                            <path d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5m10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1_25u" data-key="MetaRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 16 16">
+                            <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1_25u" data-key="ContextMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1_25u" data-key="ControlRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
+                            <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3M6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5zm4 1v4H6V6zm1-1V3.5A1.5 1.5 0 1 1 12.5 5zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11z"/>
+                        </svg>
+                    </div>
+                    <div class="gap"></div>
+                    <div class="key size-1u" data-key="ArrowLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="ArrowDown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                        </svg>
+                    </div>
+                    <div class="key size-1u" data-key="ArrowRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+let activeKey = null; // Track the currently active key
+let typingTask = null; // Track the current typing task
+let cancelTyping = false; // Flag to cancel typing
+
+function keySound() {
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = context.createOscillator();
+    const gainNode = context.createGain();
+
+    oscillator.type = 'square';
+    oscillator.frequency.setValueAtTime(680, context.currentTime); // Frequency in Hz
+    oscillator.connect(gainNode);
+    gainNode.connect(context.destination);
+
+    gainNode.gain.setValueAtTime(0.1, context.currentTime); // Set volume
+    oscillator.start();
+    oscillator.stop(context.currentTime + 0.2); // Beep for 0.2 seconds
+}
+
+// Function to handle keydown event
+function handleKeydown(event) {
+    if (activeKey === event.code) return;
+
+    const keyElement = document.querySelector(`.key[data-key="${event.code}"]`);
+    if (keyElement) {
+        keyElement.classList.add('active');
+        activeKey = event.code;
+
+        const switchSound = new Audio('https://assets.codepen.io/605876/click.mp3');
+        switchSound.play();
+
+        // Automatically release the key after 0.5 seconds
+        setTimeout(() => {
+            keyElement.classList.remove('active');
+            if (activeKey === event.code) {
+                activeKey = null;
+            }
+        }, 500);
+    }
+}
+
+document.addEventListener('keydown', handleKeydown);
+
+document.addEventListener('keyup', (event) => {
+    const keyElement = document.querySelector(`.key[data-key="${event.code}"]`);
+    if (keyElement) {
+        keyElement.classList.remove('active');
+        if (activeKey === event.code) {
+            activeKey = null; // Reset active key only if it matches the released key
+        }
+    }
+});
+
+// Function to simulate a keydown event with a string input
+function simulateKeyEvent(keyCode) {
+    const event = new KeyboardEvent('keydown', { code: keyCode });
+    handleKeydown(event);
+}
+
+// Function to simulate typing a string one character at a time
+async function simulateTyping(text, interval = 500) {
+    // Cancel any ongoing typing task
+    if (typingTask) {
+        cancelTyping = true; // Set the cancel flag
+        await typingTask; // Wait for the current task to cancel
+        cancelTyping = false; // Reset the cancel flag
+        setTimeout(function() {}, 500);
+    }
+
+    typingTask = (async () => {
+        const specialCharMap = {
+            '!': 'Digit1',
+            '@': 'Digit2',
+            '#': 'Digit3',
+            '$': 'Digit4',
+            '%': 'Digit5',
+            '^': 'Digit6',
+            '&': 'Digit7',
+            '*': 'Digit8',
+            '(': 'Digit9',
+            ')': 'Digit0'
+        };
+
+        const typingTextElement = document.querySelector('.typing-text');
+        if (!typingTextElement) return;
+
+        typingTextElement.textContent = ''; // Clear the typing text element
+
+        for (const char of text) {
+            if (cancelTyping) return; // Exit if cancel flag is set
+
+            const isUpperCase = char === char.toUpperCase() && /[A-Z]/.test(char);
+            const isSpecialChar = specialCharMap.hasOwnProperty(char);
+
+            if (isUpperCase || isSpecialChar) {
+                simulateKeyEvent('ShiftLeft'); // Simulate pressing the left Shift key
+                await new Promise(resolve => setTimeout(resolve, interval / 2));
+            }
+
+            if (isSpecialChar) {
+                simulateKeyEvent(specialCharMap[char]); // Simulate pressing the corresponding number key
+            } else if (char === ' ') {
+                simulateKeyEvent('Space'); // Simulate pressing the Spacebar
+            } else {
+                const keyCode = `Key${char.toUpperCase()}`; // Map character to keyCode
+                simulateKeyEvent(keyCode);
+            }
+
+            typingTextElement.textContent += char; // Append the character to the typing text element
+
+            await new Promise(resolve => setTimeout(resolve, interval));
+
+            if (isUpperCase || isSpecialChar) {
+                const shiftKeyElement = document.querySelector(`.key[data-key="ShiftLeft"]`);
+                if (shiftKeyElement) {
+                    shiftKeyElement.classList.remove('active');
+                    activeKey = null;
+                }
+            }
+        }
+
+        // Wait for 1 second before simulating the Enter key
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        if (cancelTyping) return; // Exit if cancel flag is set
+
+        // Simulate pressing the Enter key at the end
+        simulateKeyEvent('Enter');
+
+        // Wait for 0.2 seconds before repeating the typing
+        await new Promise(resolve => setTimeout(resolve, 200));
+
+        if (cancelTyping) return; // Exit if cancel flag is set
+
+        // Immediately clear the text and repeat the typing
+        typingTextElement.textContent = ''; // Clear the text
+        simulateTyping(text, interval);
+    })();
+}
+
+simulateTyping('New String', 500);
+setTimeout(function() { 
+    simulateTyping('First String', 500)
+}, 1200);
+// 실행 중간에 새 입력으로 기존 작업 취소
+    </script>
+    
+</body>
+</html>
